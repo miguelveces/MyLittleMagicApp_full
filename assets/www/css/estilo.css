@@ -1,0 +1,213 @@
+/*h1{*/
+	/*text-align:center; */
+	/*border: solid 0.4em;>*/
+  /*}*/
+   .contenido{    
+    width: 99%    
+   }
+   
+   .nemu{    
+    width: 65%;
+    min-height: 18em;
+    display: inline-block;
+    margin-left: 0-4em;
+    
+   }
+   .imagen{    
+    vertical-align: bottom;        
+    width: 32%;
+    min-height: 10em;
+    display: inline-block;    
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+   }
+   .imagenhijo{    
+    vertical-align: bottom;       
+    width: 98%;
+    min-height: 8em;
+    display: block;    
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+   }
+    .lis{
+    word-wrap:break-word;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px;
+   }
+   .lisinterno{
+    background-color: rgb(92, 202, 81);
+   }
+   .lisinterno1{
+    background-color: rgb(92, 202, 81);
+     -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px;
+   }
+   .lisinterno2{
+    background-color: rgb(92, 202, 81);
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+   }
+   .lis2{
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+   }
+
+   
+   .redessociales{    
+    vertical-align: top;
+    
+    width: 98%;
+    min-height: 2em;
+       padding-bottom: 3em;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+   }
+   .facetw{
+    display: inline-block;
+    
+    width: 46%;
+    
+
+   }
+   
+
+.pagina_index{
+  background-color: #FFFFFF;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#AAE1FF), to(#FFFFFF), color-stop(.5,#D3F0FF));
+  background: -moz-linear-gradient(top, #AAE1FF 0%, #D3F0FF 50%, #FFFFFF 100%);  
+  margin:0 auto 0 auto;
+
+}
+ .logo{
+  display: block;
+  margin: auto;
+}
+  .titulo_medio
+  	{
+  	text-align: center;    
+    text-shadow: 1px 1px 0.9px #0083E2;
+    filter: dropshadow(color=#ff0015, offx=1, offy=1);
+  	}
+
+    .fieldset-center-wrapper
+    {
+      width: 1000;
+      height: 12;
+      display:  table;
+      margin: 0 auto;
+    }
+
+    h5{
+      font-size: 1px; 
+      background: #fff;     
+    }
+
+      .color-boton{
+      background: rgb(92, 202, 81);         
+    }
+       #color-page{
+      background: green;         
+    }
+
+
+    /*Estilos Miguel Vecess*/
+    #contenido-temas{
+      padding: 1em;
+      padding-bottom: 3.5em;      
+    }
+
+/*Estilos de  grabacion jjd*/
+    #slider{
+    display:none;
+}
+ 
+div.ui-slider{
+    margin:0;
+    width:100%;
+}
+
+
+.ui-icon-audio-play {
+    background-image: url("../img/18/play.png");
+}
+ 
+.ui-icon-audio-pause {
+    background-image: url("../img/18/pause.png");
+}
+ 
+.ui-icon-audio-stop {
+    background-image: url("../img/18/stop.png");
+}
+ 
+.ui-icon-audio-rewind {
+    background-image: url("../img/18/rewind.png");
+}
+ 
+.ui-icon-audio-record {
+    background-image: url("../img/18/record.png");
+}
+
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .ui-icon-audio-play {
+        background-image: url("../img/36/play.png");
+        background-size: 18px 18px;
+    }
+     
+    .ui-icon-audio-pause {
+        background-image: url("../img/36/pause.png");
+        background-size: 18px 18px;
+    }
+     
+    .ui-icon-audio-stop {
+        background-image: url("../img/36/stop.png");
+        background-size: 18px 18px;
+    }
+     
+    .ui-icon-audio-rewind {
+        background-image: url("../img/36/rewind.png");
+        background-size: 18px 18px;
+    }
+     
+    .ui-icon-audio-record {
+        background-image: url("../img/36/record.png");
+        background-size: 18px 18px;
+    }
+}
+
+
+#recording{
+    font-weight: bold;
+    color:#f00;
+}
+
+
+
+
+
+
+
+
+    

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title></title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.2.0.min.css" />
+<link rel="stylesheet" type="text/css" href="css/estilo.css">
+<script src="jquery.mobile/jquery-1.6.4.min.js"></script>
+<script src="jquery.mobile/jquery.mobile-1.2.0.min.js"></script>
+<script type="text/javascript" src="js/mymagicbook.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
+<script type="text/javascript" charset="utf-8">
+
+        // Espere a que PhoneGap se inicie
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // PhoneGap esta listo
+        //
+        function onDeviceReady() {
+            playAudio("sonidos/hotel.wna");
+        }
+
+        // Reproductor de audio
+        //
+        var my_media = null;
+        var mediaTimer = null;
+
+        // Reproduce el audio
+        //
+        function playAudio(src) {
+        	console.log("sonidosssssssssss");
+            // Crea un objeto `Media` desde el argumento
+            my_media = new Media(src, onSuccess, onError);
+
+            // Reproduce el audio
+            my_media.play();
+
+            // Actualiza la posición cada segundo
+            if (mediaTimer == null) {
+                mediaTimer = setInterval(function() {
+                    // Obtiene la posición actual
+                    my_media.getCurrentPosition(
+                        // Función 'callback' satisfactoria
+                        function(position) {
+                            if (position > -1) {
+                                setAudioPosition((position) + " seg");
+                            }
+                        },
+                        // Función 'callback' de error
+                        function(e) {
+                            console.log("Error obteniendo posición=" + e);
+                            setAudioPosition("Error: " + e);
+                        }
+                    );
+                }, 1000);
+            }
+        }
+
+        // Pausa la reproducción
+        // 
+        function pauseAudio() {
+            if (my_media) {
+                my_media.pause();
+            }
+        }
+
+        // Detiene la reproducción
+        // 
+        function stopAudio() {
+            if (my_media) {
+                my_media.stop();
+            }
+            clearInterval(mediaTimer);
+            mediaTimer = null;
+        }
+
+        // Función 'callback' onSuccess
+        //
+        function onSuccess() {
+            console.log("playAudio():Audio correcto");
+        }
+
+        // Función 'callback' onError
+        //
+        function onError(error) {
+            alert('código: '  + error.code    + '\n' + 
+                  'mensaje: ' + error.message + '\n');
+        }
+
+        // Muestra la posición
+        // 
+        function setAudioPosition(position) {
+            document.getElementById('audio_position').innerHTML = position;
+        }
+
+        </script>
+</head>
+<body>
+
+	<section id="contenido" data-role="page">
+		<header data-role="header" data-theme="d">
+			<h1>
+				<img src="imagen/LogoMET.png">
+			</h1>
+			<a href="index.html" data-icon="home" data-iconpos="notext"
+				data-direction="reverse">Home</a> <a href="#temas"
+				data-icon="delete" data-iconpos="notext" data-direction="reverse">Home</a>
+
+		</header>
+		<!-- /header -->
+
+		<h1>Vocabulario Restaurante</h1>
+		<a href="#" class="btn large" onclick="playAudio('sonido/hotel.wma');">Reproducir</a>
+		<a href="#" class="btn large" onclick="pauseAudio();">Pausa</a> <a
+			href="#" class="btn large" onclick="stopAudio();">Detener</a>
+		<p id="audio_position"></p>
+
+		<article id="contenido-temas" data-role="content">
+			<ul data-role="listview">
+				<li><a href="#">1. Ordenar: To order</a></li>
+				<li><a href="#">2. Menu: Menu</a></li>
+				<li><a href="#">3. Reserva: Reservation</a></li>
+				<li><a href="#">4. La Cuenta: Bill/Cheque</a></li>
+				<li><a href="#">5. Camarero/a: Waiter/watiress</a></li>
+				<li><a href="#">6. Propina: Tip</a></li>
+				<li><a href="#">7. Mesa: Table</a></li>
+				<li><a href="#">9. Agua: Water</a></li>
+				<li><a href="#">10. Tarjeta de credito: Credit card</a></li>
+				<li><a href="#">11. Aperitivo: Appetiser</a></li>
+				<li><a href="#">12. Plato Fuerte: Entrée/Main Course</a></li>
+				<li><a href="#">13. Postre: Dessert</a></li>
+				<li><a href="#">14. Servilleta: Napkin</a></li>
+				<li><a href="#">15. Segundas: Refill</a></li>
+			</ul>
+
+			<fieldset class="ui-grid-a">
+				<div class="ui-block-a">
+					<a href="temaRestaurante.html" data-role="button" data-icon="home"
+						data-iconpos="right">Practica</a>
+				</div>
+
+				<div class="ui-block-b">
+					<a href="quizRestaurante.html" data-role="button" data-icon="home"
+						data-iconpos="right" data-theme="b">Quiz</a>
+				</div>
+			</fieldset>
+		</article>
+		<!-- /content -->
+
+		<footer data-role="footer" data-theme="c" data-position="fixed"
+			data-fullscreen="true">
+			<h2>&copy;2010 My English Time</h2>
+		</footer>
+		<!-- /footer -->
+	</section>
+	<!-- /page -->
+
+	</section>
+	<!-- /page -->
+
+
+
+</body>
+</html>

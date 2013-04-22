@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.2.0.min.css" />        
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <script src="jquery.mobile/jquery-1.6.4.min.js"></script>
+        <script src="jquery.mobile/jquery.mobile-1.2.0.min.js"></script>
+        <script type="text/javascript" src="js/mymagicbook.js"></script>
+    </head>
+    <body >
+
+        <section  id="page" data-role="page">
+            <div class="pagina_index">
+                <header data-role="header"
+                        data-theme="f">
+
+
+                    <img class="logo" src="imagen/LogoMET.png" titlo="myenglishtime. || lugar de bits, vectores y pixeles">            
+
+                    <a href="#page" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+                    <a href="#page" data-icon="delete" data-iconpos="notext" data-direction="reverse">Close</a>
+                </header><!-- /header -->
+                <article data-role="content">
+
+                    <!-- botones de espanol a ingles y viceversa -->
+                    <fieldset >
+                        <div ><a href="#popupIntro" class="color-boton" data-role="button"  data-iconpos="right" data-rel="dialog">Spanish to English</a></div>      
+
+                        <div class="titulo_medio">    
+                            <h2>My Little Magic Book</h2>
+                        </div>
+                </article>
+
+                <div class="contenido">
+                    <aside class="nemu">
+                        <ul data-role="listview">
+                            <li class="lis"><a href="#" class="lisinterno1">English to Espanish</a></li>
+                            <li><a href="#" class="lisinterno">English to Chino</a></li>
+                            <li class="lis2"><a href="#"  class="lisinterno2">Portugues to English</a></li>
+                        </ul>
+                    </aside>
+
+                    <article class="imagen">
+                        <div class="redessociales">
+                            <img class="facetw"  src="imagen/facebook.png">
+                            <img class="facetw" src="imagen/twitter.png">
+                        </div>
+
+                        <img class="imagenhijo" src="imagen/libro.jpg"/> 
+
+                    </article>
+                </div>
+
+                <fieldset 
+
+                    data-theme="c"
+                    data-position="fixed"
+                    data-fullscreen="true">
+                    <div ><a href="http://myenglishtime.net" class="color-boton" data-role="button"  data-rel="dialog" >http://myenglishtime.net </a></div>   
+                </fieldset>
+            </div>
+
+        </section><!-- /Fin de la pagina de Index-->
+
+
+        <!-- /pagina de popup-->
+        <section id="popupIntro" data-role="page" >
+            <header data-role="header"
+                    data-theme="d">
+                <img class="logo" src="imagen/LogoMET.png" titlo="myenglishtime. || lugar de bits, vectores y pixeles">
+
+            </header><!-- /header -->
+            <article data-role="content">
+                <p><center>Introduccion</center></p>
+                <p>Este libro te ayudara a desenvolverte en cualquier situacion en la que te encuentres y no sepas como comunicarte.</p>
+                <a href="#temas" data-role="button" >Iniciar</a>
+                <footer data-role="footer"
+                        data-theme="c"
+                        data-position="fixed"
+                        data-fullscreen="true">
+                    <h2>&copy;http://myenglishtime.net </h2>
+
+                </footer>
+            </article>
+        </section>
+        <!-- /Fin de la pagina de Popup-->
+
+        <!-- /Fin de la pagina de menu de temas-->
+        <section id="temas" data-role="page">
+            <div class="pagina_index">
+                <header data-role="header"
+                        data-theme="f">
+
+
+                    <img class="logo" src="imagen/LogoMET.png" titlo="myenglishtime. || lugar de bits, vectores y pixeles">            
+
+                    <a href="#temas" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+                    <a href="#page" data-icon="delete" data-iconpos="notext" data-direction="reverse">Close</a>
+                </header>
+                <article id="contenido-temas" data-role="content">
+                    <div class="content-primary">
+                        <nav>
+                            <ul data-role="listview">
+                                <li data-role="list-divider">Lista de temas a escoger</li>
+                                <li>
+                                    <a href="vocabularioRestaurante.html">
+                                        <img src="images/Restaurant.png">
+                                        <h3>Restaurante</h3>                     
+                                    </a>
+                                    <a id="tema1" href="#descricion" data-rel="dialog">Descripcin del tema</a>
+                                </li>
+                                <li>
+                                    <a href="vocabularioBanco.html">
+                                        <img src="images/Bank.png">
+                                        <h3>Banco</h3>                    
+                                    </a>
+                                    <a id="tema4" href="#descricion" data-rel="dialog">Descripcin del tema</a>
+                                </li>
+
+                                <li>
+                                    <a href="vocabularioAereopuerto.html">
+                                        <img src="images/Airport.png">
+                                        <h3>Aereopuerto</h3>                     
+                                    </a>
+                                    <a id="tema3" href="#descricion" data-rel="dialog">Descripcin del tema</a>
+                                </li>
+                                <li>
+                                    <a href="vocabularioSaludos.html">
+                                        <img src="images/Greetings.png">
+                                        <h3>Saludos y Despidos</h3>                    
+                                    </a>
+                                    <a id="tema9" href="#descricion" data-rel="dialog">Descripcin del tema</a>
+                                </li>
+                                <li>
+                                    <a href="vocabularioHotel.html">
+                                        <img src="images/hotel.png">
+                                        <h3>Hotel</h3>                     
+                                    </a>
+                                    <a id="tema2" href="#descricion" data-rel="dialog">Descripcion del tema</a>
+                                </li>
+                                <li>
+                                    <a href="vocabularioPolicia.html">
+                                        <img src="images/policia.png">
+                                        <h3>Policia</h3>                     
+                                    </a>
+                                    <a id="tema5" href="#descricion" data-rel="dialog">Descripcin del tema</a>
+                                </li>
+                                <li>
+                                    <a href="vocabularioEscuela.html">
+                                        <img src="images/escuela.png">
+                                        <h3>Escuela</h3>                     
+                                    </a>
+                                    <a id="tema6" href="#descricion" data-rel="dialog">Descripcin del tema</a>
+                                </li>
+                                <li>
+                                    <a href="temaZoologico.html">
+                                        <img src="images/zoologico.png">
+                                        <h3>Zoologico</h3>                     
+                                    </a>
+                                    <a id="tema7" href="#descricion" data-rel="dialog">Descripcin del tema</a>
+                                </li>
+                                <li>
+                                    <a href="vocabularioHospital.html">
+                                        <img src="images/hospital.png">
+                                        <h3>Hospital</h3>                     
+                                    </a>
+                                    <a id="tema8" href="#descricion" data-rel="dialog">Descripcin del tema</a>
+                                </li>         
+                            </ul>   
+                        </nav>
+                    </div>
+                </article><!-- /content -->
+               <fieldset 
+
+                    data-theme="c"
+                    data-position="fixed"
+                    data-fullscreen="true">
+                    <div ><a href="http://myenglishtime.net" class="color-boton" data-role="button"  data-rel="dialog" >http://myenglishtime.net </a></div>   
+                </fieldset>
+            </div>
+
+        </section>
+        <!-- /Fin de la pagina de Menu de temas-->
+
+        <!-- Pagina que mostrara la descripcion del tema -->
+        <section id="descricion" data-role="page">
+            <header data-role="header" 
+                    data-theme="d">
+                <h1><img src="imagen/LogoMET.png"></h1>
+                <h1>Descripcion tema...</h1>
+            </header><!-- /header -->
+            <article data-role="content">
+                <p>Content: <span id="contenido"></span></p>
+            </article><!-- /content -->
+            <footer data-role="footer" data-theme="c" data-position="fixed"
+                    data-fullscreen="true">
+                <h2>&copy;2010 My English Timee</h2>
+            </footer>
+        </section><!-- /page -->
+        <!-- Fin de la pagina de descripcion -->
+    </body>
+</html>
