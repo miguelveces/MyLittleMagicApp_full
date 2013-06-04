@@ -6,86 +6,75 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="format-detection" content="telephone=no" />
         <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.2.0.min.css" />        
         <link rel="stylesheet" type="text/css" href="css/estilo.css">
-        <script src="jquery.mobile/jquery-1.6.4.min.js"></script>
+
+        <script src="jquery.mobile/jquery-1.7.1.js"></script>
         <script src="jquery.mobile/jquery.mobile-1.2.0.min.js"></script>
         <script type="text/javascript" src="js/mymagicbook.js"></script>
+         <script type="text/javascript" src="js/valida_ingreso.js"></script>
+         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/cordova-2.5.0.js"></script>
     </head>
-    <body >
+    <body >                    
 
         <section  id="page" data-role="page">
             <div class="pagina_index">
                 <header data-role="header"
-                        data-theme="f">
-
-
-                    <img class="logo" src="imagen/LogoMET.png" titlo="myenglishtime. || lugar de bits, vectores y pixeles">            
-
-                    <a href="#page" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
-                    <a href="#page" data-icon="delete" data-iconpos="notext" data-direction="reverse">Close</a>
+                        data-theme="f"> 
+                        <figure class="logo">
+                            <img src="imagen/Icono48.png"/>
+                        </figure>                          
+                        <div class="titulo_medio">                            
+                            <h1>MY LITTLE MAGIC APP</h1>
+                        </div>                                     
                 </header><!-- /header -->
                 <article data-role="content">
-
-                    <!-- botones de espanol a ingles y viceversa -->
-                    <fieldset >
+                    <!-- botones de espanol a ingles y viceversa -->                    
                         <div ><a href="#popupIntro" class="color-boton" data-role="button"  data-iconpos="right" data-rel="dialog">Spanish to English</a></div>      
-
-                        <div class="titulo_medio">    
-                            <h2>My Little Magic Book</h2>
-                        </div>
                 </article>
 
-                <div class="contenido">
-                    <aside class="nemu">
-                        <ul data-role="listview">
-                            <li class="lis"><a href="#" class="lisinterno1">English to Espanish</a></li>
-                            <li><a href="#" class="lisinterno">English to Chino</a></li>
-                            <li class="lis2"><a href="#"  class="lisinterno2">Portugues to English</a></li>
-                        </ul>
-                    </aside>
-
-                    <article class="imagen">
-                        <div class="redessociales">
-                            <img class="facetw"  src="imagen/facebook.png">
-                            <img class="facetw" src="imagen/twitter.png">
+                <aside class="contenido">
+                    <!-- <aside class="nemu"> -->
+                        <!-- <img class="logo" src="imagen/Icono48.png" titlo="myenglishtime. || lugar de bits, vectores y pixeles">             -->
+                        <!-- <ul data-role="listview">
+                            <li class="lis"><a href="#" class="lisinterno1">English to Spanish</a></li>
+                            <li><a href="#" class="lisinterno">Chinese to English</a></li>
+                            <li class="lis2"><a href="#"  class="lisinterno2">Portuguese to English</a></li>
+                        </ul> -->
+                        <!-- <div class="imagen">                        
+                            <img class="imagenhijo" src="imagen/libro.jpg"/> 
                         </div>
-
-                        <img class="imagenhijo" src="imagen/libro.jpg"/> 
-
-                    </article>
-                </div>
+                        <div class="redessociales">
+                            <img class="facetw"  src="imagen/facebook.png">                            
+                            <img class="facetw" src="imagen/twitter.png">
+                        </div> -->
+                        <!-- <div class="content-primary"> -->
+                        <nav>
+                            <ul id="tema_por_libro" data-role="listview" >
+                                 <!-- aqui se escribe los temas -->
+                            </ul>   
+                    </nav>
+                    <!-- </div> -->
+                                    
+                </aside>
 
                 <fieldset 
-
                     data-theme="c"
-                    data-position="fixed"
-                    data-fullscreen="true">
-                    <div ><a href="http://myenglishtime.net" class="color-boton" data-role="button"  data-rel="dialog" >http://myenglishtime.net </a></div>   
+                    data-position="fixed">
+                    <div ><a href="http://myenglishtime.net"  class="footer" data-rel="dialog" >http://myenglishtime.net </a></div>   
                 </fieldset>
             </div>
 
         </section><!-- /Fin de la pagina de Index-->
 
-
         <!-- /pagina de popup-->
-        <section id="popupIntro" data-role="page" >
-            <header data-role="header"
-                    data-theme="d">
-                <img class="logo" src="imagen/LogoMET.png" titlo="myenglishtime. || lugar de bits, vectores y pixeles">
-
-            </header><!-- /header -->
+        <section id="popupIntro" data-role="page" >        
             <article data-role="content">
-                <p><center>Introduccion</center></p>
-                <p>Este libro te ayudara a desenvolverte en cualquier situacion en la que te encuentres y no sepas como comunicarte.</p>
-                <a href="#temas" data-role="button" >Iniciar</a>
-                <footer data-role="footer"
-                        data-theme="c"
-                        data-position="fixed"
-                        data-fullscreen="true">
-                    <h2>&copy;http://myenglishtime.net </h2>
-
-                </footer>
+                <p><center>Introducci&oacute;n</center></p>
+                <p>Este libro te ayudara a desenvolverte en cualquier situaci&oacute;n en la que te encuentres y no sepas como comunicarte.</p>
+                <a href="#temas" data-role="button" >Iniciar</a>               
             </article>
         </section>
         <!-- /Fin de la pagina de Popup-->
@@ -95,8 +84,6 @@
             <div class="pagina_index">
                 <header data-role="header"
                         data-theme="f">
-
-
                     <img class="logo" src="imagen/LogoMET.png" titlo="myenglishtime. || lugar de bits, vectores y pixeles">            
 
                     <a href="#temas" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
@@ -105,83 +92,18 @@
                 <article id="contenido-temas" data-role="content">
                     <div class="content-primary">
                         <nav>
-                            <ul data-role="listview">
-                                <li data-role="list-divider">Lista de temas a escoger</li>
-                                <li>
-                                    <a href="vocabularioRestaurante.html">
-                                        <img src="images/Restaurant.png">
-                                        <h3>Restaurante</h3>                     
-                                    </a>
-                                    <a id="tema1" href="#descricion" data-rel="dialog">Descripcin del tema</a>
-                                </li>
-                                <li>
-                                    <a href="vocabularioBanco.html">
-                                        <img src="images/Bank.png">
-                                        <h3>Banco</h3>                    
-                                    </a>
-                                    <a id="tema4" href="#descricion" data-rel="dialog">Descripcin del tema</a>
-                                </li>
-
-                                <li>
-                                    <a href="vocabularioAereopuerto.html">
-                                        <img src="images/Airport.png">
-                                        <h3>Aereopuerto</h3>                     
-                                    </a>
-                                    <a id="tema3" href="#descricion" data-rel="dialog">Descripcin del tema</a>
-                                </li>
-                                <li>
-                                    <a href="vocabularioSaludos.html">
-                                        <img src="images/Greetings.png">
-                                        <h3>Saludos y Despidos</h3>                    
-                                    </a>
-                                    <a id="tema9" href="#descricion" data-rel="dialog">Descripcin del tema</a>
-                                </li>
-                                <li>
-                                    <a href="vocabularioHotel.html">
-                                        <img src="images/hotel.png">
-                                        <h3>Hotel</h3>                     
-                                    </a>
-                                    <a id="tema2" href="#descricion" data-rel="dialog">Descripcion del tema</a>
-                                </li>
-                                <li>
-                                    <a href="vocabularioPolicia.html">
-                                        <img src="images/policia.png">
-                                        <h3>Policia</h3>                     
-                                    </a>
-                                    <a id="tema5" href="#descricion" data-rel="dialog">Descripcin del tema</a>
-                                </li>
-                                <li>
-                                    <a href="vocabularioEscuela.html">
-                                        <img src="images/escuela.png">
-                                        <h3>Escuela</h3>                     
-                                    </a>
-                                    <a id="tema6" href="#descricion" data-rel="dialog">Descripcin del tema</a>
-                                </li>
-                                <li>
-                                    <a href="temaZoologico.html">
-                                        <img src="images/zoologico.png">
-                                        <h3>Zoologico</h3>                     
-                                    </a>
-                                    <a id="tema7" href="#descricion" data-rel="dialog">Descripcin del tema</a>
-                                </li>
-                                <li>
-                                    <a href="vocabularioHospital.html">
-                                        <img src="images/hospital.png">
-                                        <h3>Hospital</h3>                     
-                                    </a>
-                                    <a id="tema8" href="#descricion" data-rel="dialog">Descripcin del tema</a>
-                                </li>         
+                            <ul id="tema_por_libro" data-role="listview" >
+                                 <!-- aqui se escribe los temas -->
                             </ul>   
-                        </nav>
+                    </nav>
                     </div>
                 </article><!-- /content -->
-               <fieldset 
-
+               <!-- <fieldset 
                     data-theme="c"
                     data-position="fixed"
                     data-fullscreen="true">
                     <div ><a href="http://myenglishtime.net" class="color-boton" data-role="button"  data-rel="dialog" >http://myenglishtime.net </a></div>   
-                </fieldset>
+                </fieldset> -->
             </div>
 
         </section>
@@ -196,12 +118,9 @@
             </header><!-- /header -->
             <article data-role="content">
                 <p>Content: <span id="contenido"></span></p>
-            </article><!-- /content -->
-            <footer data-role="footer" data-theme="c" data-position="fixed"
-                    data-fullscreen="true">
-                <h2>&copy;2010 My English Timee</h2>
-            </footer>
+            </article><!-- /content -->      
         </section><!-- /page -->
         <!-- Fin de la pagina de descripcion -->
     </body>
+
 </html>

@@ -84,3 +84,12 @@ document.getElementById("contenido").innerHTML="En este tema entontraras fraces 
 function tema_15(){
 document.getElementById("contenido").innerHTML="En este tema entontraras fraces practicas referente a tema 15"
 }
+
+
+function borrarRDB(){
+
+  $("input[type='radio']").attr("checked",false).checkboxradio("refresh");
+  document.quiz.score.value = "";
+  document.quiz.puntaje.value = "";
+
+}
