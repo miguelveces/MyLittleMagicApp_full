@@ -1,25 +1,62 @@
 <!DOCTYPE html>
 <html>
-    <head>
+     <head>
 
         <title></title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="format-detection" content="telephone=no" />
-        <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.2.0.min.css" />        
-        <link rel="stylesheet" type="text/css" href="css/estilo.css">
-
-        <script src="jquery.mobile/jquery-1.7.1.js"></script>
-        <script src="jquery.mobile/jquery.mobile-1.2.0.min.js"></script>
-        <script type="text/javascript" src="js/mymagicbook.js"></script>
-         <script type="text/javascript" src="js/valida_ingreso.js"></script>
-         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/cordova-2.5.0.js"></script>
+        <meta name="format-detection" content="telephone=no" />            
+        <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Englebert' rel='stylesheet' type='text/css'/> 
+        <link href="jquery.mobile/jquery.mobile-1.2.0.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/themes/metapp.css" />        
+    
     </head>
     <body >                    
+      
+        <section  id="page" data-role="page" data-theme="a">
+            
+            <div class="pagina_index">
+                <header data-role="header"
+                        data-theme="f"> 
+                        <figure class="logo">
+                            <img src="imagen/Icono48.png"/>
+                        </figure>                          
+                        <div class="titulo_medio" >                            
+                            <h1>MY LITTLE MAGIC APP</h1>
+                        </div>                                     
+                </header><!-- /header -->
+                <article data-role="content">
+                    <!-- botones de espanol a ingles y viceversa -->                    
+                        <div ><a id="reproc" href="#popupIntro" class="color-boton" data-role="button"  data-iconpos="right" data-rel="dialog"  >Spanish to English</a></div>      
+                         <label id="noconexion" class="cabecera"></label>
+                </article>
 
-        <section  id="page" data-role="page">
+                <aside class="contenido">                   
+                        <nav>
+                            <ul id="tema_por_libro" data-role="listview" >
+                                 <!-- aqui se escribe los temas -->
+                                 <!--  -->
+                            </ul>   
+                        </nav>
+                    <!-- </div> -->                    
+                </aside>
+
+                <fieldset 
+                    data-theme="c"
+                    data-position="fixed">
+                    <div id="mensaje"><a href="http://myenglishtime.net"  class="footer" data-rel="dialog" >My English Time </a></div>   
+                </fieldset>
+            </div>
+
+        </section><!-- /Fin de la pagina de Index-->
+
+       
+        <!-- /Fin de la pagina de Popup-->
+
+        <!-- /Fin de la pagina de menu de vocabularios-->
+        <section id="temas" data-role="page" data-theme="a">
             <div class="pagina_index">
                 <header data-role="header"
                         data-theme="f"> 
@@ -30,97 +67,168 @@
                             <h1>MY LITTLE MAGIC APP</h1>
                         </div>                                     
                 </header><!-- /header -->
-                <article data-role="content">
-                    <!-- botones de espanol a ingles y viceversa -->                    
-                        <div ><a href="#popupIntro" class="color-boton" data-role="button"  data-iconpos="right" data-rel="dialog">Spanish to English</a></div>      
-                </article>
-
-                <aside class="contenido">
-                    <!-- <aside class="nemu"> -->
-                        <!-- <img class="logo" src="imagen/Icono48.png" titlo="myenglishtime. || lugar de bits, vectores y pixeles">             -->
-                        <!-- <ul data-role="listview">
-                            <li class="lis"><a href="#" class="lisinterno1">English to Spanish</a></li>
-                            <li><a href="#" class="lisinterno">Chinese to English</a></li>
-                            <li class="lis2"><a href="#"  class="lisinterno2">Portuguese to English</a></li>
-                        </ul> -->
-                        <!-- <div class="imagen">                        
-                            <img class="imagenhijo" src="imagen/libro.jpg"/> 
-                        </div>
-                        <div class="redessociales">
-                            <img class="facetw"  src="imagen/facebook.png">                            
-                            <img class="facetw" src="imagen/twitter.png">
-                        </div> -->
-                        <!-- <div class="content-primary"> -->
-                        <nav>
-                            <ul id="tema_por_libro" data-role="listview" >
-                                 <!-- aqui se escribe los temas -->
-                            </ul>   
-                    </nav>
-                    <!-- </div> -->
-                                    
-                </aside>
-
-                <fieldset 
-                    data-theme="c"
-                    data-position="fixed">
-                    <div ><a href="http://myenglishtime.net"  class="footer" data-rel="dialog" >http://myenglishtime.net </a></div>   
-                </fieldset>
-            </div>
-
-        </section><!-- /Fin de la pagina de Index-->
-
-        <!-- /pagina de popup-->
-        <section id="popupIntro" data-role="page" >        
-            <article data-role="content">
-                <p><center>Introducci&oacute;n</center></p>
-                <p>Este libro te ayudara a desenvolverte en cualquier situaci&oacute;n en la que te encuentres y no sepas como comunicarte.</p>
-                <a href="#temas" data-role="button" >Iniciar</a>               
-            </article>
-        </section>
-        <!-- /Fin de la pagina de Popup-->
-
-        <!-- /Fin de la pagina de menu de temas-->
-        <section id="temas" data-role="page">
-            <div class="pagina_index">
-                <header data-role="header"
-                        data-theme="f">
-                    <img class="logo" src="imagen/LogoMET.png" titlo="myenglishtime. || lugar de bits, vectores y pixeles">            
-
-                    <a href="#temas" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
-                    <a href="#page" data-icon="delete" data-iconpos="notext" data-direction="reverse">Close</a>
-                </header>
                 <article id="contenido-temas" data-role="content">
-                    <div class="content-primary">
+                    <!-- <div id="content-primary"> -->
                         <nav>
-                            <ul id="tema_por_libro" data-role="listview" >
+                            <ul id="frases_por_temas" data-role="listview" >
                                  <!-- aqui se escribe los temas -->
                             </ul>   
-                    </nav>
+                        </nav>
+                    <!-- </div> -->
+                    <div id="botones" data-role="controlgroup" data-type="horizontal" data-inline="true">
+                            <a href="#page" data-role="button" data-inline="true">Inicio</a>
+                            <a href="#frases" data-role="button" data-inline="true">Frases</a>
+                            <a href="#quiz1" data-role="button" data-inline="true">Quiz</a>
                     </div>
+                    
                 </article><!-- /content -->
-               <!-- <fieldset 
-                    data-theme="c"
-                    data-position="fixed"
-                    data-fullscreen="true">
-                    <div ><a href="http://myenglishtime.net" class="color-boton" data-role="button"  data-rel="dialog" >http://myenglishtime.net </a></div>   
-                </fieldset> -->
+              
             </div>
 
         </section>
         <!-- /Fin de la pagina de Menu de temas-->
 
-        <!-- Pagina que mostrara la descripcion del tema -->
-        <section id="descricion" data-role="page">
-            <header data-role="header" 
-                    data-theme="d">
-                <h1><img src="imagen/LogoMET.png"></h1>
-                <h1>Descripcion tema...</h1>
-            </header><!-- /header -->
-            <article data-role="content">
-                <p>Content: <span id="contenido"></span></p>
-            </article><!-- /content -->      
+       <!-- comienza la pagina de frases -->
+        <section id="frases" data-role="page" data-theme="a">
+            <div class="pagina_index">
+                <header data-role="header"
+                        data-theme="f"> 
+                        <figure class="logo">
+                            <img src="imagen/Icono48.png"/>
+                        </figure>                          
+                        <div class="titulo_medio">                            
+                            <h1>MY LITTLE MAGIC APP</h1>
+                        </div>                                     
+                </header><!-- /header -->
+            <article data-role="content">  
+            <ul data-role="listview" id="frases_utiles" data-theme="a">
+                    <li>
+                        <div data-role="collapsible" data-mini="true" data-theme="a" data-content-theme="a">
+                            <h4>Cargando....</h4>
+                            <ul data-role="listview" id="Frases_practicas">
+                                <li><a href="#">Cargando...</a></li>
+                                
+                            </ul>
+                        </div>
+                    </li>                            
+               </ul>             
+                 
+                 <div id="botones" data-role="controlgroup" data-type="horizontal" data-inline="true">
+                            <a href="#page" data-role="button" data-inline="true">Inicio</a>                          
+                            <a href="#quiz1" data-role="button" data-inline="true">Quiz</a>
+                    </div>
+                    
+            </article><!-- /content -->
+            </div>
         </section><!-- /page -->
-        <!-- Fin de la pagina de descripcion -->
+        <!-- termina la pagina de frases -->
+
+<!-- comienza la pagina del quiz numero1 -->
+       <section id="quiz1" data-role="page" data-theme="a">
+        <div class="pagina_index">
+           <header data-role="header"
+                        data-theme="f"> 
+                <figure class="logo">
+                    <img src="imagen/Icono48.png"/>
+                </figure>                          
+                <div class="titulo_medio">                            
+                    <h1>MY LITTLE MAGIC APP</h1>
+                </div>                                     
+            </header><!-- /header -->
+
+           <article data-role="content">
+
+            <form name="quiz">
+
+               <ul data-role="listview" id="lista_quiz1">
+                
+                   <li>Cargando...</li>
+                </ul>
+                <p>                
+                    <label class="resultados" id="score" > </label>                
+                    <label class="resultados"  id="puntaje" > </label>
+                </p>
+                
+                <div id="botones" data-role="controlgroup" data-type="horizontal" data-inline="true">
+                    <a href="" id="resultado"  data-role="button" data-inline="true"  >Enviar</a> 
+                    <a href="#" data-role="button"  id="limpiar" data-inline="true">Limpiar</a>
+                    <a href="#quiz2" data-role="button" data-inline="true">Quiz2</a>
+                 </div>               
+               </form>
+
+           </article><!-- /content --> 
+           </div>         
+       </section><!-- /page -->
+
+
+<!-- comienza la pagina de quiz # 2 -->
+       <section id="quiz2" data-role="page" data-theme="a">
+        <div class="pagina_index">
+            <header data-role="header"
+                        data-theme="f"> 
+                <figure class="logo">
+                    <img src="imagen/Icono48.png"/>
+                </figure>                          
+                <div class="titulo_medio">                            
+                    <h1>MY LITTLE MAGIC APP</h1>
+                </div>                                     
+            </header><!-- /header -->
+
+           <article data-role="content">
+               <div id="contenedor">
+                   <!-- contenido -->
+
+                   <div class="header_boton">
+                    <span class="encaezado_quiz2">Put the following phrases in order. </span>
+                       <div id="botones2" data-role="controlgroup" data-type="horizontal">
+                        <div class="ui-block-a"><a href="#" data-role="button" data-theme="a" id="os" data-inline="true">Calificar</a></div>  
+                        <div class="ui-block-b"><a href="#page" data-role="button" data-theme="a" id="final" data-inline="true">Finalizar</a></div>
+                        </div>
+                        <div id="estrella1" class="icono-users"></div>
+                        <div id="estrella2" class="icono-users"></div>
+                        <div id="estrella3" class="icono-users"></div>
+                        
+                   </div>
+                   <div id="cajon">
+                       <div id="drag">
+                           
+                       </div>
+                       <div id="drop">
+                           
+                       </div> 
+                   </div>   
+               </div>
+
+           </article><!-- /content --> 
+           </div>          
+       </section><!-- /page -->
+
+        <script src="jquery.mobile/jquery-1.8.3.js"></script>
+        <script src="jquery.mobile/jquery.mobile-1.2.0.min.js"></script>
+        <script src="jquery.mobile/jquery-ui.min.js"></script>
+        <script src="jquery.mobile/jquery.ui.touch-punch.js"></script>          
+        <script type="text/javascript" src="js/valida_ingreso.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/met_frases.js"></script>
+        <script type="text/javascript" src="js/met_vocabulario.js"></script>
+        <script type="text/javascript" src="js/met_quiz1.js"></script>
+        <script type="text/javascript" src="js/met_quiz2.js"></script>        
+        <script type="text/javascript" src="cordova-2.5.0.js"></script>
+
+       <script type="text/javascript">
+            app.initialize();
+              function reproducirAudio(origen) {    
+              //reproductor basico
+                var mi_audio = new Media(origen, todoSalioBien, hayErrores);         
+                    mi_audio.play();         
+                }         
+                function todoSalioBien(){
+                  console.log("el audio esta listo!!!")
+                }
+                function hayErrores(e){
+                  alert("no se encuentra auidio Disponible!")
+                }
+       </script>
     </body>
 
 </html>
