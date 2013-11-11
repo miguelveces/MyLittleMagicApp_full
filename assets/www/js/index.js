@@ -133,7 +133,7 @@ $(function() {
             type: "GET",
             contentType: "application/json; charset=utf-8",
             dataType: "jsonp",
-            url: "http://myenglishtimeapp.net/services/temas.php",
+            url: "http://myenglishtimeapp.net/services/temasPro.php",
             cache: true,
             crossDomain: true,
             data: {codigo: 8}, //se le envia al servidor la variable codigo la cual contiene el codigo del libro a buscar
